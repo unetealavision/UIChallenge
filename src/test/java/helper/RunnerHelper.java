@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class RunnerHelper {
-    private WebDriver webDriver;
+    protected WebDriver webDriver;
 
     @Before
 
@@ -14,7 +14,7 @@ public class RunnerHelper {
     {
         webDriver = new ChromeDriver();
         webDriver
-                .get("www.wikipedia.org");
+                .get("https://www.wikipedia.org");
         webDriver
                 .manage().window().fullscreen();
     }
@@ -22,7 +22,7 @@ public class RunnerHelper {
     @After
     public void tearDown()
     {
-        
+        webDriver.quit();
     }
 
 }
