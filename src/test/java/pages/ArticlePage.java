@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class ArticlePage extends BasePage
 {
     @FindBy(id="firstHeading")
-    private WebElement articleTilte;
+    private WebElement articleTitle;
 
     public ArticlePage(WebDriver webDriver)
     {
@@ -16,7 +16,7 @@ public class ArticlePage extends BasePage
 
     public String getArticleName()
     {
-        return articleTilte.getText();
+        return articleTitle.getText();
 
     }
 

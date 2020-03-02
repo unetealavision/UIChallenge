@@ -10,5 +10,6 @@ public class BasePage {
     {
         this.webDriver=webDriver;
         PageFactory.initElements(webDriver,this);
+
     }
 }
