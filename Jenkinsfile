@@ -7,6 +7,6 @@ maven 'Maven'
 stages {
 stage('Run Tests'){
   steps{
-     sh 'mvn clean verify'
+     bat 'mvn clean verify'
   }
   }}}
