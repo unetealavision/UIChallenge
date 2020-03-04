@@ -28,6 +28,7 @@ public class InvalidRegistrationStep {
 
     @When("^The user fills all fields excepting 'celular'$")
     public void theUserFillsAllFieldsExceptingCelular() {
+        homePage.insertData();
     }
 
     @And("^Tries to save its data$")
