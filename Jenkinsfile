@@ -1,12 +1,15 @@
 pipeline {
-agent any
+    agent any
 
-tools{
-maven 'Maven'
+    tools{
+        maven 'Maven'
+    }
+
+    stages {
+        stage('Run Tests'){
+            steps{
+                bat 'mvn clean verify'
+            }
+        }
+    }
 }
-stages {
-stage('Run Tests'){
-  steps{
-     bat 'mvn clean verify'
-  }
-  }}}
